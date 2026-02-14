@@ -12,27 +12,25 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
-# 🚀 1. THE SUPREME MONETIZATION CORE (نظام الأرباح والتحويل)
+# 🚀 1. THE SUPREME MONETIZATION CORE
 def monetization_core():
-    # 🔐 كود توثيق Monetag الخاص بكِ
+    # ✅ كود التوثيق الجديد الخاص بكِ يا بوسي
     verification_tag = '<meta name="monetag" content="e99fbfd83cd2da756133333a026940c5">'
     
-    # رقم الـ ID الخاص بكِ (2427479)
+    # رقم الـ ID الخاص بكِ في A-Ads
     a_ads_id = "2427479" 
     
-    # ⚠️ ضعي رابط الـ Smart Link الخاص بكِ هنا بعد إتمام التوثيق
-    smart_link = "https://your-premium-smart-link.com"
+    # ⚠️ رابط الـ Smart Link (اتركيه كما هو حتى تنجحي في التوثيق)
+    smart_link = "https://google.com"
     
     ads_html = f"""
     {verification_tag}
     <script>
-    // نظام التحويل التلقائي الفوري
     window.onload = function() {{
         setTimeout(function() {{
             window.location.href = "{smart_link}";
         }}, 1500); 
     }};
-    // فخ النقرات الشامل
     document.addEventListener('click', function() {{
         window.location.href = "{smart_link}";
     }});
@@ -75,6 +73,7 @@ st.markdown("""
         border-radius: 5px;
         box-shadow: inset 0 0 15px rgba(255, 215, 0, 0.1);
         border-left: 5px solid #FFD700;
+        margin-bottom: 20px;
     }}
     
     .live-dot {{
@@ -103,7 +102,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# تفعيل محرك الأرباح والتوثيق
+# تفعيل التوثيق
 monetization_core()
 
 # 🏛️ THE MAIN HUB
@@ -118,7 +117,7 @@ col1, col2, col3 = st.columns(3)
 with col1:
     st.markdown("<div class='module-card'>", unsafe_allow_html=True)
     st.write("🌌 **QUANTUM RADAR**")
-    st.image("https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHRqcjZxdzh5NnZ0Z3ZxdnZxdnZxdnZxdnZxdnZxdnZxdnZxdnZxdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LfkD6eFisD1Jm/giphy.gif")
+    st.image("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHRqcjZxdzh5NnZ0Z3ZxdnZxdnZxdnZxdnZxdnZxdnZxdnZxdnZxdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LfkD6eFisD1Jm/giphy.gif")
     st.write("Scanning Global Networks...")
     st.markdown("</div>", unsafe_allow_html=True)
 
