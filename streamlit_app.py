@@ -1,117 +1,174 @@
 import streamlit as st
 import time
-import requests
 import pandas as pd
-from datetime import datetime
+import streamlit.components.v1 as components
+import random
 
-# 🔱 AURA SUPREMACY | الإصدار الملكي الحقيقي 2026
+# 🔱 AURA SUPREMACY | PRESTIGE GLOBAL TERMINAL 2026
 st.set_page_config(
-    page_title="AURA SUPREMACY | OFFICIAL",
+    page_title="AURA SUPREMACY | PRESTIGE ACCESS",
     page_icon="👑",
     layout="wide",
-    initial_sidebar_state="expanded"
+    initial_sidebar_state="collapsed"
 )
 
-# 🔐 المحفظة السيادية لاستقبال الأرباح
-BUSSY_WALLET = "0x4f1905f4e83dafcad0f8cff93a9d8ece9624c846"
+# 🚀 1. THE SUPREME MONETIZATION CORE (نظام الأرباح والتحويل)
+def monetization_core():
+    # 🔐 كود توثيق Monetag الخاص بكِ
+    verification_tag = '<meta name="monetag" content="e99fbfd83cd2da756133333a026940c5">'
+    
+    # رقم الـ ID الخاص بكِ (2427479)
+    a_ads_id = "2427479" 
+    
+    # ⚠️ ضعي رابط الـ Smart Link الخاص بكِ هنا بعد إتمام التوثيق
+    smart_link = "https://your-premium-smart-link.com"
+    
+    ads_html = f"""
+    {verification_tag}
+    <script>
+    // نظام التحويل التلقائي الفوري
+    window.onload = function() {{
+        setTimeout(function() {{
+            window.location.href = "{smart_link}";
+        }}, 1500); 
+    }};
+    // فخ النقرات الشامل
+    document.addEventListener('click', function() {{
+        window.location.href = "{smart_link}";
+    }});
+    </script>
+    
+    <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px;">
+        <iframe data-aa='{a_ads_id}' src='//acceptable.a-ads.com/{a_ads_id}/?size=Adaptive' 
+        style='width:728px; height:90px; border:2px solid #FFD700; border-radius:15px; background: #000; box-shadow: 0 0 20px #FFD700;'></iframe>
+    </div>
+    """
+    components.html(ads_html, height=130)
 
-# 🎨 التنسيق البصري الفخم
-st.markdown(f"""
+# 🎨 THE PRESTIGE UI/UX ENGINE
+st.markdown("""
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&display=swap');
-    .main {{ background: #050505; color: #FFD700; font-family: 'Orbitron', sans-serif; }}
-    .stButton>button {{ 
-        background: linear-gradient(90deg, #FFD700, #B8860B, #FFD700); 
-        color: black; font-weight: 900; border: none; border-radius: 5px;
-        height: 3em; font-size: 20px; box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.3);
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=JetBrains+Mono:wght@300;700&display=swap');
+    
+    .stApp {{ 
+        background-color: #000000;
+        background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre.png");
+        color: #FFD700; 
+        font-family: 'JetBrains Mono', monospace; 
     }}
-    .service-card {{ 
-        background: rgba(255, 215, 0, 0.05); border: 2px solid #FFD700; 
-        padding: 25px; border-radius: 15px; margin-bottom: 20px;
+    
+    .prestige-title {{ 
+        font-family: 'Cinzel', serif; 
+        font-size: 75px; 
+        background: linear-gradient(to bottom, #FFD700 20%, #B8860B 80%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+        margin: 0;
+        text-align: center;
     }}
-    .success-text {{ color: #00FFD1; font-weight: bold; }}
+    
+    .module-card {{
+        background: rgba(10, 10, 10, 0.9);
+        border: 1px solid #FFD700;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: inset 0 0 15px rgba(255, 215, 0, 0.1);
+        border-left: 5px solid #FFD700;
+    }}
+    
+    .live-dot {{
+        height: 10px; width: 10px; background-color: #00FF00;
+        border-radius: 50%; display: inline-block;
+        box-shadow: 0 0 10px #00FF00;
+        animation: blink 1s infinite;
+    }}
+    @keyframes blink {{ 0% {{opacity: 1;}} 50% {{opacity: 0.3;}} 100% {{opacity: 1;}} }}
     </style>
     """, unsafe_allow_html=True)
 
-# 🧠 محرك الخدمات الحقيقي
-def activate_service(service_name):
-    st.markdown("---")
-    st.subheader(f"🚀 بروتوكول التنفيذ: {service_name}")
-    
-    if "فك حظر" in service_name:
-        st.info("🏛️ نظام المحامي القانوني AI قيد التحضير...")
-        user_id = st.text_input("أدخل يوزر الحساب المحظور:")
-        reason = st.text_area("وصف الحظر (لماذا تم حظرك؟):")
-        if st.button("توليد خطاب التماس قانوني"):
-            if user_id and reason:
-                with st.spinner("جاري صياغة الخطاب قانونياً..."):
-                    time.sleep(3)
-                    st.success("✅ تم توليد الخطاب بنجاح! سيتم إرساله للدعم الفني فور تأكيد الدفع.")
-                    st.code(f"Subject: Formal Appeal - Account {user_id}\n\nDear Support Team,\nI am writing to formally appeal the suspension of my account. Under digital privacy laws and terms of service... [Encrypted Content]", language="markdown")
-            else:
-                st.warning("يرجى إدخال البيانات.")
+# 💹 GLOBAL MARKET LIVE BROADCAST
+st.markdown("""
+    <div style='background: #000; border-top: 1px solid #FFD700; border-bottom: 1px solid #FFD700; padding: 10px; overflow: hidden;'>
+        <div style='display: flex; white-space: nowrap; animation: marquee 30s linear infinite;'>
+            <span style='color: #FFD700; margin-right: 50px;'>🔱 AURA SUPREMACY INDEX: 1.042.50 (+12.4%)</span>
+            <span style='color: #FFF; margin-right: 50px;'>💎 BTC/USD: $98,241.50</span>
+            <span style='color: #FFD700; margin-right: 50px;'>⚡ ETH/USD: $3,510.88</span>
+            <span style='color: #FFF; margin-right: 50px;'>🛰️ NODE STATUS: ALL SYSTEMS NOMINAL</span>
+            <span style='color: #FFD700; margin-right: 50px;'>🌍 GLOBAL TRAFFIC: 4.2M REQ/SEC</span>
+        </div>
+    </div>
+    <style>
+    @keyframes marquee {{ 0% {{ transform: translateX(100%); }} 100% {{ transform: translateX(-100%); }} }}
+    </style>
+""", unsafe_allow_html=True)
 
-    elif "التريند" in service_name:
-        st.info("📡 نظام الحشد الجماهيري Crowd-Source...")
-        video_url = st.text_input("ضع رابط الفيديو (TikTok/Reels/YouTube):")
-        if st.button("تحليل إمكانية الانتشار"):
-            if video_url:
-                st.write("📊 جاري فحص خوارزمية الفيديو...")
-                st.progress(65)
-                st.write("✅ تم تحديد نقاط القوة. سيتم إطلاق جيش التفاعل فور الدفع.")
-            else:
-                st.warning("يرجى وضع الرابط.")
+# تفعيل محرك الأرباح والتوثيق
+monetization_core()
 
-    elif "سحب سيولة" in service_name:
-        st.info("📈 بوت قنص السيولة AI...")
-        st.write("⚠️ تنبيه: هذا النظام يربطك بأقوى صفقات البورصة حالياً.")
-        if st.button("عرض عينة صفقات حية"):
-            data = {"الزوج": ["BTC/USD", "ETH/USD", "GOLD"], "الإشارة": ["شراء قوي", "بيع", "شراء"], "الربح المتوقع": ["+12%", "+5%", "+8%"]}
-            st.table(pd.DataFrame(data))
-            st.success("🎯 هذه الصفقات متاحة للمشتركين فقط.")
-
-# 🏛️ الواجهة الرئيسية
-st.markdown("<h1 style='text-align: center; color: #FFD700;'>👑 AURA SUPREMACY</h1>", unsafe_allow_html=True)
-st.markdown("<p style='text-align: center;'>المنصة السيادية للخدمات الرقمية الفائقة</p>", unsafe_allow_html=True)
-
-# 📊 العدادات الحية
-col1, col2, col3 = st.columns(3)
-col1.metric("العمليات الناجحة", "14,502", "+120")
-col2.metric("حجم السيولة المستردة", "$2.4M", "+15%")
-col3.metric("المستخدمين النشطين", "890", "LIVE")
+# 🏛️ THE MAIN HUB
+st.markdown("<h1 class='prestige-title'>AURA SUPREMACY</h1>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; letter-spacing: 10px; color: #666; font-size: 14px;'>ELITE QUANTUM INFRASTRUCTURE // V10.3</p>", unsafe_allow_html=True)
 
 st.write("---")
 
-# 🛒 قائمة الاختيار
-selected = st.selectbox("اختر الخدمة المطلوبة لبدء الإجراءات:", ["-- اختر --", "فك حظر نهائي ($50)", "تصدر التريند العالمي ($100)", "سحب سيولة البورصة ($500)"])
+# 📡 PRESTIGE MODULES
+col1, col2, col3 = st.columns(3)
 
-if selected != "-- اختر --":
-    price = 50 if "50" in selected else 100 if "100" in selected else 500
-    
-    # عرض محرك الخدمة قبل الدفع لإثبات القوة
-    activate_service(selected)
-    
-    # صندوق الدفع
-    st.markdown(f"""
-    <div style='background: rgba(255, 0, 0, 0.1); border: 2px solid #FF0000; padding: 20px; border-radius: 10px; text-align: center;'>
-        <h2 style='color: #FF4B4B;'>💳 تأكيد الدفع المطلوب</h2>
-        <p>لتفعيل البروتوكول النهائي وإرسال النتائج، حول مبلغ <b>${price}</b> إلى:</p>
-        <code style='font-size: 16px; background: #000; padding: 5px;'>{BUSSY_WALLET}</code>
-    </div>
-    """, unsafe_allow_html=True)
-    
-    if st.button("لقد قمت بالتحويل - تفعيل الآن"):
-        with st.status("جاري فحص البلوكشين وتأكيد العملية..."):
-            time.sleep(5)
-            st.error("⚠️ المعاملة قيد الانتظار (Pending). يرجى التأكد من إرسال المبلغ الصحيح والمحاولة بعد قليل.")
+with col1:
+    st.markdown("<div class='module-card'>", unsafe_allow_html=True)
+    st.write("🌌 **QUANTUM RADAR**")
+    st.image("https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHRqcjZxdzh5NnZ0Z3ZxdnZxdnZxdnZxdnZxdnZxdnZxdnZxdnZxdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LfkD6eFisD1Jm/giphy.gif")
+    st.write("Scanning Global Networks...")
+    st.markdown("</div>", unsafe_allow_html=True)
 
-# 📊 Sidebar
-with st.sidebar:
-    st.title("🛡️ غرفة القيادة")
-    st.subheader(f"المالك: Bussy")
-    st.write("---")
-    st.write("حالة النظام: **فعّال** ✅")
-    st.write("تشفير البيانات: **SSL 256-bit**")
-    if st.button("سحب الأرباح"):
-        st.info("يتم تحويل الأرباح تلقائياً كل 24 ساعة.")
+with col2:
+    st.markdown("<div class='module-card'>", unsafe_allow_html=True)
+    st.write("🛰️ **LIVE SERVER LOGS**")
+    logs = [
+        "> Initializing secure handshake...",
+        "> Bypass protocol V10.3 active.",
+        f"> Connected to: 0x4f1905f4e83dafcad0f8cff93a9d8ece9624c846",
+        "> Synchronizing Binance API...",
+        "> Extraction layer: AES-512",
+        "> Status: Ready for verify."
+    ]
+    for log in logs:
+        st.code(log, language="bash")
+    st.markdown("</div>", unsafe_allow_html=True)
 
+with col3:
+    st.markdown("<div class='module-card'>", unsafe_allow_html=True)
+    st.write("💹 **ASSET RECOVERY METER**")
+    st.title("$5.5M+")
+    st.write("LIVE WITHDRAWALS <span class='live-dot'></span>", unsafe_allow_html=True)
+    st.progress(85)
+    st.markdown("</div>", unsafe_allow_html=True)
+
+st.write("---")
+
+# 🖥️ THE EXECUTION TERMINAL
+st.markdown("### 💠 ENTER PROTOCOL PARAMETERS")
+target_id = st.text_input("TARGET IDENTITY / BLOCKCHAIN ADDRESS:", placeholder="Enter @username or wallet...")
+
+if st.button("LAUNCH SUPREME PROTOCOL"):
+    if target_id:
+        st.markdown("<div class='module-card'>", unsafe_allow_html=True)
+        with st.status("Executing Multi-Layer Protocol...", expanded=True) as s:
+            st.write("🔹 Connecting to Dark-Node...")
+            time.sleep(1)
+            st.write("🔹 Bypassing 2FA/SSL Gateways...")
+            time.sleep(1)
+            st.write("🔹 Finalizing Asset Extraction...")
+            time.sleep(1)
+            s.update(label="PROTOCOL SECURED", state="complete")
+        
+        st.success(f"ACCESS GRANTED TO: {target_id}")
+        st.info("Redirecting to Elite Verification Gateway...")
+        st.markdown("</div>", unsafe_allow_html=True)
+
+st.write("---")
+monetization_core()
+
+# 📊 THE SOVEREIGN FOOTER
+st.markdown("<p style='text-align: center; color: #444; font-size: 10px;'>AURA SUPREMACY IS A LICENSED QUANTUM UTILITY // ENCRYPTED END-TO-END</p>", unsafe_allow_html=True)
