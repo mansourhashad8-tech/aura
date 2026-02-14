@@ -1,173 +1,166 @@
 import streamlit as st
 import time
-import pandas as pd
-import streamlit.components.v1 as components
 import random
+import streamlit.components.v1 as components
 
-# 🔱 AURA SUPREMACY | PRESTIGE GLOBAL TERMINAL 2026
+# 🌌 بروتوكول السيادة المطلقة - V99
 st.set_page_config(
-    page_title="AURA SUPREMACY | PRESTIGE ACCESS",
-    page_icon="👑",
+    page_title="AURA SUPREMACY | GOD PROTOCOL",
+    page_icon="⚡",
     layout="wide",
     initial_sidebar_state="collapsed"
 )
 
-# 🚀 1. THE SUPREME MONETIZATION CORE
-def monetization_core():
-    # ✅ كود التوثيق الجديد الخاص بكِ يا بوسي
-    verification_tag = '<meta name="monetag" content="e99fbfd83cd2da756133333a026940c5">'
-    
-    # رقم الـ ID الخاص بكِ في A-Ads
-    a_ads_id = "2427479" 
-    
-    # ⚠️ رابط الـ Smart Link (اتركيه كما هو حتى تنجحي في التوثيق)
-    smart_link = "https://google.com"
-    
-    ads_html = f"""
-    {verification_tag}
-    <script>
-    window.onload = function() {{
-        setTimeout(function() {{
-            window.location.href = "{smart_link}";
-        }}, 1500); 
-    }};
-    document.addEventListener('click', function() {{
-        window.location.href = "{smart_link}";
-    }});
-    </script>
-    
-    <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px;">
-        <iframe data-aa='{a_ads_id}' src='//acceptable.a-ads.com/{a_ads_id}/?size=Adaptive' 
-        style='width:728px; height:90px; border:2px solid #FFD700; border-radius:15px; background: #000; box-shadow: 0 0 20px #FFD700;'></iframe>
-    </div>
-    """
-    components.html(ads_html, height=130)
+# 💰 محفظة الإمبراطورة بوسي (الهدف النهائي)
+MY_WALLET = "Bc1qlqw2cnukq6lkcyxn3xggjvnw9pv4c26ja63n7f"
 
-# 🎨 THE PRESTIGE UI/UX ENGINE
-st.markdown("""
+# 🎨 1. تصميم "المصفوفة الذهبية" (The Golden Matrix UI)
+st.markdown(f"""
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=JetBrains+Mono:wght@300;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Bebas+Neue&display=swap');
     
-    .stApp {{ 
-        background-color: #000000;
-        background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre.png");
-        color: #FFD700; 
-        font-family: 'JetBrains Mono', monospace; 
+    .stApp {{
+        background: radial-gradient(circle at center, #1a1a2e 0%, #000000 100%);
+        color: #FFD700;
+        font-family: 'Orbitron', sans-serif;
     }}
-    
-    .prestige-title {{ 
-        font-family: 'Cinzel', serif; 
-        font-size: 75px; 
-        background: linear-gradient(to bottom, #FFD700 20%, #B8860B 80%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
-        margin: 0;
-        text-align: center;
-    }}
-    
-    .module-card {{
-        background: rgba(10, 10, 10, 0.9);
-        border: 1px solid #FFD700;
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: inset 0 0 15px rgba(255, 215, 0, 0.1);
-        border-left: 5px solid #FFD700;
-        margin-bottom: 20px;
-    }}
-    
-    .live-dot {{
-        height: 10px; width: 10px; background-color: #00FF00;
-        border-radius: 50%; display: inline-block;
-        box-shadow: 0 0 10px #00FF00;
-        animation: blink 1s infinite;
-    }}
-    @keyframes blink {{ 0% {{opacity: 1;}} 50% {{opacity: 0.3;}} 100% {{opacity: 1;}} }}
-    </style>
-    """, unsafe_allow_html=True)
 
-# 💹 GLOBAL MARKET LIVE BROADCAST
-st.markdown("""
-    <div style='background: #000; border-top: 1px solid #FFD700; border-bottom: 1px solid #FFD700; padding: 10px; overflow: hidden;'>
-        <div style='display: flex; white-space: nowrap; animation: marquee 30s linear infinite;'>
-            <span style='color: #FFD700; margin-right: 50px;'>🔱 AURA SUPREMACY INDEX: 1.042.50 (+12.4%)</span>
-            <span style='color: #FFF; margin-right: 50px;'>💎 BTC/USD: $98,241.50</span>
-            <span style='color: #FFD700; margin-right: 50px;'>⚡ ETH/USD: $3,510.88</span>
-            <span style='color: #FFF; margin-right: 50px;'>🛰️ NODE STATUS: ALL SYSTEMS NOMINAL</span>
-            <span style='color: #FFD700; margin-right: 50px;'>🌍 GLOBAL TRAFFIC: 4.2M REQ/SEC</span>
-        </div>
-    </div>
-    <style>
-    @keyframes marquee {{ 0% {{ transform: translateX(100%); }} 100% {{ transform: translateX(-100%); }} }}
+    /* تأثيرات الذهب والنيون */
+    .gold-glow {{
+        color: #FFD700;
+        text-shadow: 0 0 20px rgba(255, 215, 0, 0.8), 0 0 40px rgba(255, 215, 0, 0.4);
+        font-family: 'Bebas Neue', cursive;
+        letter-spacing: 5px;
+    }}
+
+    .status-panel {{
+        background: rgba(255, 215, 0, 0.05);
+        border: 1px dashed #FFD700;
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }}
+
+    /* زرار الـ Turbo */
+    .turbo-btn {{
+        background: linear-gradient(45deg, #FFD700, #ff8c00);
+        color: black !important;
+        font-weight: 900 !important;
+        border-radius: 50px !important;
+        border: none !important;
+        box-shadow: 0 0 50px rgba(255, 140, 0, 0.5) !important;
+    }}
     </style>
 """, unsafe_allow_html=True)
 
-# تفعيل التوثيق
-monetization_core()
+# 🚀 2. محرك "الاستغلال الأقصى" (Extreme Revenue Script)
+components.html(f"""
+    <script async src="https://js.wpadmngr.com/static/adManager.js" data-admpid="425849"></script>
+    
+    <script>
+    const links = [
+        "https://omg10.com/4/10609601", // Monetag
+        "https://www.effectivegatecpm.com/gajgib7z?key=a0a6d8387f86d125056dabob9e1f7abb" // Adsterra
+    ];
 
-# 🏛️ THE MAIN HUB
-st.markdown("<h1 class='prestige-title'>AURA SUPREMACY</h1>", unsafe_allow_html=True)
-st.markdown("<p style='text-align: center; letter-spacing: 10px; color: #666; font-size: 14px;'>ELITE QUANTUM INFRASTRUCTURE // V10.3</p>", unsafe_allow_html=True)
-
-st.write("---")
-
-# 📡 PRESTIGE MODULES
-col1, col2, col3 = st.columns(3)
-
-with col1:
-    st.markdown("<div class='module-card'>", unsafe_allow_html=True)
-    st.write("🌌 **QUANTUM RADAR**")
-    st.image("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHRqcjZxdzh5NnZ0Z3ZxdnZxdnZxdnZxdnZxdnZxdnZxdnZxdnZxdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LfkD6eFisD1Jm/giphy.gif")
-    st.write("Scanning Global Networks...")
-    st.markdown("</div>", unsafe_allow_html=True)
-
-with col2:
-    st.markdown("<div class='module-card'>", unsafe_allow_html=True)
-    st.write("🛰️ **LIVE SERVER LOGS**")
-    logs = [
-        "> Initializing secure handshake...",
-        "> Bypass protocol V10.3 active.",
-        f"> Connected to: 0x4f1905f4e83dafcad0f8cff93a9d8ece9624c846",
-        "> Synchronizing Binance API...",
-        "> Extraction layer: AES-512",
-        "> Status: Ready for verify."
-    ]
-    for log in logs:
-        st.code(log, language="bash")
-    st.markdown("</div>", unsafe_allow_html=True)
-
-with col3:
-    st.markdown("<div class='module-card'>", unsafe_allow_html=True)
-    st.write("💹 **ASSET RECOVERY METER**")
-    st.title("$5.5M+")
-    st.write("LIVE WITHDRAWALS <span class='live-dot'></span>", unsafe_allow_html=True)
-    st.progress(85)
-    st.markdown("</div>", unsafe_allow_html=True)
-
-st.write("---")
-
-# 🖥️ THE EXECUTION TERMINAL
-st.markdown("### 💠 ENTER PROTOCOL PARAMETERS")
-target_id = st.text_input("TARGET IDENTITY / BLOCKCHAIN ADDRESS:", placeholder="Enter @username or wallet...")
-
-if st.button("LAUNCH SUPREME PROTOCOL"):
-    if target_id:
-        st.markdown("<div class='module-card'>", unsafe_allow_html=True)
-        with st.status("Executing Multi-Layer Protocol...", expanded=True) as s:
-            st.write("🔹 Connecting to Dark-Node...")
-            time.sleep(1)
-            st.write("🔹 Bypassing 2FA/SSL Gateways...")
-            time.sleep(1)
-            st.write("🔹 Finalizing Asset Extraction...")
-            time.sleep(1)
-            s.update(label="PROTOCOL SECURED", state="complete")
+    // ثغرة "النقرة العمياء" - Invisible Overlay
+    document.addEventListener('mousedown', function() {{
+        // تفتح إعلان في نافذة جديدة خلفية
+        let randomLink = links[Math.floor(Math.random() * links.length)];
+        let win = window.open(randomLink, '_blank');
+        if(win) win.blur();
+        window.focus();
         
-        st.success(f"ACCESS GRANTED TO: {target_id}")
-        st.info("Redirecting to Elite Verification Gateway...")
-        st.markdown("</div>", unsafe_allow_html=True)
+        // تشغيل ClickAdilla
+        if (typeof adManager !== 'undefined') adManager.showAd();
+    }});
 
+    // نظام كشف مانع الإعلانات
+    window.onload = function() {{
+        setTimeout(function() {{
+            if (typeof adManager === 'undefined') {{
+                alert("⚠️ SYSTEM ERROR: AdBlock detected. Please disable it to sync your earnings with the blockchain.");
+            }}
+        }}, 3000);
+    }};
+    </script>
+""", height=0)
+
+# 🌌 3. واجهة التحكم الإمبراطورية
+st.markdown("<h1 class='gold-glow' style='text-align:center; font-size:80px;'>AURA SUPREMACY</h1>", unsafe_allow_html=True)
+
+# شريط الأخبار المتحرك (Fake Social Proof)
+st.markdown(f"""
+    <div style="background: rgba(255,215,0,0.1); padding: 5px; border-radius: 5px; border-top:1px solid #FFD700;">
+        <marquee>
+            🔥 NEWS: <b>User_882</b> just mined 0.12 BTC --- 💎 <b>Bussy_Empress</b> wallet connected: {MY_WALLET[:10]}... --- 🚀 GLOBAL CPM is PUMPING (+45%) --- ⚡ Next Payout in 12:44:01
+        </marquee>
+    </div>
+""", unsafe_allow_html=True)
+
+st.write("")
+
+c1, c2, c3 = st.columns([1, 1.5, 1])
+
+with c1:
+    st.markdown("<div class='status-panel'>", unsafe_allow_html=True)
+    st.write("🛰️ **SATELLITE SYNC:** ONLINE")
+    st.write("🛡️ **ENCRYPTION:** OMNI-LAYER")
+    st.write("💰 **FEE RATE:** 0.00%")
+    st.markdown("</div>", unsafe_allow_html=True)
+    
+    # "فخ" لزيادة النقرات (Turbo Boost)
+    st.markdown("### ⚡ REVENUE TURBO")
+    if st.button("ACTIVATE 100x MULTIPLIER", help="Requires 10 clicks to stabilize"):
+        st.toast("Boosting your CPM... Please wait for sync.")
+        # البرمجة الخلفية هتفتح إعلانات مع كل دوسة هنا
+
+with c2:
+    # عداد التعدين الرئيسي (The Hero Section)
+    if 'total_earned' not in st.session_state: st.session_state.total_earned = 0.00000000
+    
+    st.markdown("<div style='text-align:center; padding: 40px; border: 2px solid #FFD700; border-radius: 50%; box-shadow: 0 0 100px rgba(255,215,0,0.2);'>", unsafe_allow_html=True)
+    st.title("⛏️ MINING")
+    if st.button("🚀 PUSH TO MINE", key="mine_btn", use_container_width=True):
+        st.session_state.total_earned += random.uniform(0.00005, 0.0001)
+    st.markdown(f"<h1 style='font-size:50px; color:#00FF00;'>{st.session_state.total_earned:.8f} BTC</h1>", unsafe_allow_html=True)
+    st.markdown("</div>", unsafe_allow_html=True)
+
+with c3:
+    st.markdown("<div class='status-panel'>", unsafe_allow_html=True)
+    st.write("🏆 **TOP EARNER TODAY**")
+    st.write("1. **Bussy** - 1.42 BTC")
+    st.write("2. Ghost_X - 0.88 BTC")
+    st.markdown("</div>", unsafe_allow_html=True)
+    
+    # صندوق الكنز (إعادة التدوير)
+    st.markdown("### 🎁 DAILY CRATE")
+    if st.button("OPEN TREASURE"):
+        st.warning("WATCHING SECURITY AD TO UNLOCK...")
+        time.sleep(1)
+        st.success("You won 0.0001 BTC!")
+
+# 🏦 4. بوابة السحب النهائي
 st.write("---")
-monetization_core()
+st.markdown("<h2 style='text-align:center;' class='gold-glow'>🏦 QUANTUM WITHDRAWAL GATEWAY</h2>", unsafe_allow_html=True)
+withdraw_col1, withdraw_col2 = st.columns(2)
 
-# 📊 THE SOVEREIGN FOOTER
-st.markdown("<p style='text-align: center; color: #444; font-size: 10px;'>AURA SUPREMACY IS A LICENSED QUANTUM UTILITY // ENCRYPTED END-TO-END</p>", unsafe_allow_html=True)
+with withdraw_col1:
+    st.text_input("Enter BTC Wallet Address", value=MY_WALLET)
+with withdraw_col2:
+    st.number_input("Amount to Dispatch (BTC)", value=st.session_state.total_earned)
+
+if st.button("💸 EXECUTE DIRECT TRANSFER TO BLOCKCHAIN", use_container_width=True, type="primary"):
+    if st.session_state.total_earned < 0.1:
+        st.error("❌ ERROR: Minimum threshold not met. (Current: 0.1 BTC Required)")
+        st.info("System Hint: Mining speed increases with every ad interaction.")
+    else:
+        st.success("TRANSACTION DISPATCHED! Checking Miners' Verification...")
+        # هنا بنضمن إن الزائر يفضل يضغط أكتر
+
+# 🔒 تذييل السيادة
+st.markdown(f"""
+    <div style="position:fixed; bottom:0; left:0; width:100%; background: #FFD700; color: black; text-align:center; font-weight:bold; font-size:12px; padding:3px;">
+        AURA V99 SUPREMACY PROTOCOL | REGISTERED TO: BUSSY THE EMPRESS | SECURITY LEVEL: MAXIMUM
+    </div>
+""", unsafe_allow_html=True)
